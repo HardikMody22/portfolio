@@ -26,6 +26,7 @@ class App extends Component {
             </Navigation>
           </Header>
           <Drawer
+            className="header-color"
             title={
               <Link style={{ textDecoration: "none", color: "black" }} to="/">
                 Hardik Mody

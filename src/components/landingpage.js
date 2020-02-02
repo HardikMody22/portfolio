@@ -23,7 +23,7 @@ class Landing extends Component {
               <div className="social-links">
                 {/* LinkedIn */}
                 <a
-                  href="www.linkedin.com/in/hardikmody22"
+                  href="https://linkedin.com/in/hardikmody22/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
