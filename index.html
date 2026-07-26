@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hardik Mody - Technical Account Manager, AWS</title>
+<meta name="description" content="Hardik Mody - Technical Account Manager at AWS focused on Data Analytics and Generative AI. Experience, projects, certifications and skills." />
+<meta property="og:title" content="Hardik Mody - Technical Account Manager, AWS" />
+<meta property="og:description" content="Data Analytics & Generative AI at AWS. A decade of building and advising on cloud systems." />
+<meta property="og:type" content="profile" />
+<link rel="stylesheet" href="./styles.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+<!-- ambient background -->
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="spotlight" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#/">
+      <span class="dot" id="brandInitials">HM</span>
+      <span id="brandName">Hardik Mody</span>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Pages">
+      <a href="#/">Home</a>
+      <a href="#/experience">Experience</a>
+      <a href="#/education">Education</a>
+      <a href="#/about">About</a>
+      <a href="#/skills">Skills</a>
+      <a href="#/projects">Projects</a>
+      <a href="#/certifications">Certifications</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle color theme">◐</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ==========================================================
+       PAGE 1: HOME  (hero + the two interactive entry points)
+       ========================================================== -->
+  <div class="page" data-route="/">
+
+    <section class="hero" id="hero">
+      <canvas id="nn" aria-hidden="true"></canvas>
+
+      <figure class="portrait" id="portrait">
+        <span class="ring" aria-hidden="true"></span>
+        <span class="ring ring2" aria-hidden="true"></span>
+        <span class="orbit" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="frame">
+          <img id="avatar" src="./avatar.jpg" alt="Hardik Mody" width="640" height="640" decoding="async" />
+          <span class="mono" id="avatarFallback" aria-hidden="true">HM</span>
+          <span class="scan" aria-hidden="true"></span>
+        </span>
+      </figure>
+
+      <div class="hero-content">
+        <a class="kicker kicker-link" id="heroKickerLink" href="#/">
+          <span class="pulse" aria-hidden="true"></span>
+          <span id="heroKicker">Open to interesting opportunities</span>
+          <span class="kicker-mail" aria-hidden="true">&#9993;</span>
+        </a>
+        <h1>Hi, I'm <span class="grad" id="heroName">Hardik</span>.</h1>
+        <p class="role" id="heroRole"></p>
+        <p class="where" id="heroWhere"></p>
+        <p class="tagline" id="heroTagline"></p>
+
+        <div class="term" aria-hidden="true">
+          <div class="term-bar"><i></i><i></i><i></i><span>hardik@aws</span></div>
+          <div class="term-body"><span class="ps1">$</span> <span id="typed"></span><span class="caret"></span></div>
+        </div>
+
+        <div class="cta" id="heroCta"></div>
+        <div class="stats" id="statsWrap"></div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marquee"></div>
+    </div>
+
+    <!-- live RAG demo, first thing after the hero -->
+    <section id="ai">
+      <div class="eyebrow reveal">Generative AI</div>
+      <h2 class="title reveal">
+        <span class="brain" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+              <circle cx="22" cy="30" r="7"/><circle cx="22" cy="70" r="7"/>
+              <circle cx="50" cy="20" r="7"/><circle cx="50" cy="50" r="7"/><circle cx="50" cy="80" r="7"/>
+              <circle cx="78" cy="35" r="7"/><circle cx="78" cy="65" r="7"/>
+              <path d="M29 30l14-8M29 30l14 18M29 70l14 10M29 70l14-18M57 20l14 13M57 50l14-13M57 50l14 13M57 80l14-13"/>
+            </g>
+          </svg>
+        </span>
+        Ask the model
+      </h2>
+      <p class="cluster-note reveal">
+        A retrieval pipeline, running on this page with no backend. The query is embedded,
+        matched against chunks of my profile, then the answer streams back token by token.
+        Same architecture I help customers ship on Bedrock.
+      </p>
+
+      <div class="rag reveal" id="rag">
+        <div class="rag-stages" id="ragStages"></div>
+        <div class="rag-panel">
+          <div class="rag-q"><span class="ps1">query</span> <span id="ragQ"></span></div>
+          <div class="rag-a"><span id="ragA"></span><span class="caret" id="ragCaret"></span></div>
+          <div class="rag-tel" id="ragTel" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- entry point 1: the VPC opens the Experience page -->
+    <section id="cluster">
+      <div class="eyebrow reveal">Career as infrastructure</div>
+      <h2 class="title reveal">
+        <span class="helm" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="5">
+            <circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="13"/>
+            <path d="M50 7v13M50 80v13M7 50h13M80 50h13M20 20l9 9M71 71l9 9M80 20l-9 9M29 71l-9 9"/>
+          </g></svg>
+        </span>
+        My career as infrastructure
+      </h2>
+      <p class="cluster-note reveal">
+        Two VPCs, three subnets, <span id="clusterCount">9</span> clusters and
+        <span id="clusterRoleCount">16</span> nodes. Companies are clusters, roles are nodes,
+        and the skills I ran in each role are the containers on them. Click any cluster,
+        or open the full write-up below.
+      </p>
+      <div class="vpcs reveal" id="clusterWrap"></div>
+      <div class="kubelog reveal">
+        <span class="ps1">kubectl</span> <span id="kubelog">get nodes --all-clusters --watch</span>
+      </div>
+      <div class="legend reveal" aria-hidden="true">
+        <span><i class="lg creating"></i> Joining</span>
+        <span><i class="lg running"></i> Ready</span>
+        <span><i class="lg cur"></i> Current role</span>
+      </div>
+      <a class="opener reveal" href="#/experience">
+        <span class="op-k">describe</span>
+        <span class="op-t">Open the full experience page</span>
+        <span class="op-a" aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+
+    <!-- entry point 2: the eval suite opens the Education page -->
+    <section id="evals">
+      <div class="eyebrow reveal">Education</div>
+      <h2 class="title reveal">
+        <span class="brain" aria-hidden="true">
+          <svg viewBox="0 0 100 100">
+            <g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round">
+              <circle cx="22" cy="30" r="7"/><circle cx="22" cy="70" r="7"/>
+              <circle cx="50" cy="20" r="7"/><circle cx="50" cy="50" r="7"/><circle cx="50" cy="80" r="7"/>
+              <circle cx="78" cy="35" r="7"/><circle cx="78" cy="65" r="7"/>
+              <path d="M29 30l14-8M29 30l14 18M29 70l14 10M29 70l14-18M57 20l14 13M57 50l14-13M57 50l14 13M57 80l14-13"/>
+            </g>
+          </svg>
+        </span>
+        Education, as an eval suite
+      </h2>
+      <p class="cluster-note reveal">
+        Twenty years of schooling scored like an eval run. Each case shows what was selected,
+        the assertions it satisfied, and the candidates that were not selected.
+      </p>
+      <div class="evals reveal" id="evalsWrap"></div>
+      <a class="opener reveal" href="#/education">
+        <span class="op-k">describe</span>
+        <span class="op-t">Open the full education page</span>
+        <span class="op-a" aria-hidden="true">&rarr;</span>
+      </a>
+    </section>
+
+    <!-- every other page, reachable from home -->
+    <section id="explore">
+      <div class="eyebrow reveal">More</div>
+      <h2 class="title reveal">Everything else</h2>
+      <div class="openers reveal">
+        <a class="opener" href="#/skills">
+          <span class="op-k">skills</span>
+          <span class="op-t">What I work with</span>
+          <span class="op-a" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="opener" href="#/projects">
+          <span class="op-k">projects</span>
+          <span class="op-t">Things I've built</span>
+          <span class="op-a" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="opener" href="#/certifications">
+          <span class="op-k">certs</span>
+          <span class="op-t">25 credentials</span>
+          <span class="op-a" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="opener" href="#/about">
+          <span class="op-k">about</span>
+          <span class="op-t">The short version</span>
+          <span class="op-a" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==========================================================
+       PAGE 2: EXPERIENCE
+       ========================================================== -->
+  <div class="page" data-route="/experience">
+    <section id="experience">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">Experience</div>
+      <h2 class="title reveal">Where I've worked</h2>
+      <p class="cluster-note reveal">
+        Nine companies, sixteen roles, a decade. This is the long form of the VPC diagram
+        on the home page.
+      </p>
+      <div id="expWrap"></div>
+    </section>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 3: EDUCATION
+       ========================================================== -->
+  <div class="page" data-route="/education">
+    <section id="education">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">Education</div>
+      <h2 class="title reveal">Academic history</h2>
+      <p class="cluster-note reveal">
+        School through masters, in order. The eval suite on the home page is the short
+        version of this.
+      </p>
+      <div id="eduFullWrap"></div>
+
+      <h2 class="title reveal" style="margin-top:38px">Coursework</h2>
+      <div class="grid two" id="eduWrap"></div>
+    </section>
+  </div>
+
+
+  <!-- ==========================================================
+       PAGE 5: ABOUT
+       ========================================================== -->
+  <div class="page" data-route="/about">
+    <section id="about">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">About</div>
+      <h2 class="title reveal">The short version</h2>
+      <div class="card prose reveal" id="aboutWrap"></div>
+    </section>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 6: SKILLS
+       ========================================================== -->
+  <div class="page" data-route="/skills">
+    <section id="skills">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">Skills</div>
+      <h2 class="title reveal">What I work with</h2>
+      <div class="filters reveal" id="filters"></div>
+      <div id="skillWrap" class="reveal"></div>
+    </section>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 7: PROJECTS
+       ========================================================== -->
+  <div class="page" data-route="/projects">
+    <section id="projects">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">Projects</div>
+      <h2 class="title reveal">Things I've built</h2>
+      <div class="grid three" id="projWrap"></div>
+    </section>
+  </div>
+
+  <!-- ==========================================================
+       PAGE 8: CERTIFICATIONS
+       ========================================================== -->
+  <div class="page" data-route="/certifications">
+    <section id="certs">
+      <a class="backlink" href="#/">&larr; back to overview</a>
+      <div class="eyebrow reveal">Certifications</div>
+      <h2 class="title reveal">Credentials</h2>
+      <div class="grid two" id="certWrap"></div>
+      <button class="btn" id="certToggle"></button>
+    </section>
+  </div>
+
+</main>
+
+<footer>
+  <div class="fl" id="footLinks"></div>
+  <div id="footNote"></div>
+</footer>
+
+<script src="./data.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
